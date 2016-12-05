@@ -22,29 +22,16 @@ public class SelectionSort {
         System.out.print("How many numbers?: ");
         int n = input.nextInt();
         int[] nums = new int[n];
-        int min;
+       
         
         for(int o = 0; o < nums.length; o++){
             System.out.print("What is a number?: ");
             nums[o] = input.nextInt();
         }
+       
         
-        
-        for(int i = 0; i < nums.length; i++){
-            min = i;
-            for(int j = i + 1; j < nums.length; j++){
-                if(nums[j] < nums[min]){
-                    min = j;
-                }
-            }
-            
-            if(min != i){
-                int temp = nums[i];
-                nums[i] = nums[min];
-                nums[min] = temp;
-            }
-        }
-        System.out.println(Arrays.toString(nums));
+      
+        System.out.println(Arrays.toString(SelectionSorting.sorting(nums)));
         
     }
 }
