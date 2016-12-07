@@ -19,6 +19,8 @@ public class SelectionSort {
      */
     public static void main(String[] args) {
         
+        int c;
+        
         //sets a scanner to take the user's input
         Scanner input = new Scanner(System.in);
         
@@ -29,7 +31,7 @@ public class SelectionSort {
         int[] nums = new int[n];
         
         //prompts the user for either random or normal number selection
-        System.out.println("Random or normal?");
+        System.out.print("Random or normal?: ");
         answer = input.next();
         
         //if the user wants random, this code runs
@@ -55,6 +57,7 @@ public class SelectionSort {
             //outputs the array and the elapsed time
             outputting(nums);
         }
+        
 
     }
     
@@ -67,5 +70,6 @@ public class SelectionSort {
     public static void outputting(int[] nums) {
         System.out.println(Arrays.toString(SelectionSorting.sorting(nums)));
         System.out.println(SelectionSorting.Duration());
+        System.out.println(SelectionSorting.comparisons() + " comparisons");
     }
 }

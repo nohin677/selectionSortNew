@@ -12,7 +12,7 @@ import java.text.DecimalFormat;
  * @author nohin6777
  */
 public class SelectionSorting {
-
+    private static int c;
     public static double duration;
     /**
      * 
@@ -20,6 +20,7 @@ public class SelectionSorting {
      * @return 
      */
     public static int[] sorting(int[] nums) {
+        
         long startTime = System.nanoTime();
         int min;
         for (int i = 0; i < nums.length; i++) {
@@ -28,6 +29,7 @@ public class SelectionSorting {
                 if (nums[j] < nums[min]) {
                     min = j;
                 }
+                c = nums.length*(i+1);
             }
 
             if (min != i) {
@@ -44,5 +46,10 @@ public class SelectionSorting {
     public static String Duration() {
         DecimalFormat formatter = new DecimalFormat("##.##########" + " seconds");
         return formatter.format(duration / 1000000000);
+        
+    }
+    
+    public static int comparisons(){
+        return c;
     }
 }
