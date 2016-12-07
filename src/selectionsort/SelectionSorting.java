@@ -13,7 +13,7 @@ import java.text.DecimalFormat;
  */
 public class SelectionSorting {
     private static int c;
-    public static double duration;
+    private static double duration;
     /**
      * 
      * @param nums
